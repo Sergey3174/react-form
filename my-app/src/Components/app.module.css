@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+.container {
+	margin:0 auto;
+	font-family: "Roboto", sans-serif;
+	font-size: 14px;
+	width: 30rem;
+	border-radius: 20px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border: 2px solid rgb(64, 129, 167);
+	flex-wrap: wrap;
+}
+
+.form_registration{
+	margin: 10px;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	gap: 5px;
+}
+
+.error{
+	font-size: 12px;
+	color: red;
+}
+
+input{
+	width: 15rem;
+	height: 25px;
+	background-color: rgba(102, 139, 206, 0.432);
+	border: 2px solid rgb(64, 129, 167);
+	border-radius: 5px;
+
+
+}
