@@ -69,7 +69,9 @@ export const FormValid = () => {
 	const onChange = ({ target }) => updateState(target.name, target.value);
 
 	const onBlurEmail = ({ target }) => {
-		if (
+		if (target.value === '') {
+			setEmailError('Введите почту');
+		} else if (
 			!/^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i.test(
 				target.value,
 			)
@@ -80,7 +82,9 @@ export const FormValid = () => {
 
 	const onBlurPassword = ({ target }) => {
 		let error = null;
-		if (!/(?=.*[0-9])/.test(target.value)) {
+		if (target.value === '') {
+			error = 'Введите пароль';
+		} else if (!/(?=.*[0-9])/.test(target.value)) {
 			error = 'В пароле должна быть одна цифра';
 		} else if (!/(?=.*[A-Z])/.test(target.value)) {
 			error = 'Должна быть одна заглавная буква';
