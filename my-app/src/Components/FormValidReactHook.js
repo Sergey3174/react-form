@@ -13,7 +13,7 @@ const fieldsSheme = yup.object().shape({
 		.matches(/(?=.*[A-Z])/, 'В пароле должна быть одна заглавная буква'),
 	confirmPassword: yup
 		.string()
-		.oneOf([yup.ref('password'), null], 'Пароли не совпадает'),
+		.oneOf([yup.ref('password'), null], 'Пароли не совпадают'),
 });
 export const FormValidReactHook = () => {
 	const {
@@ -22,6 +22,7 @@ export const FormValidReactHook = () => {
 		formState: { errors, isValid },
 		reset,
 	} = useForm({
+		mode: 'onBlur',
 		defaultValues: {
 			email: '',
 			password: '',

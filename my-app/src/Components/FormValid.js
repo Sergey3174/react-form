@@ -108,6 +108,7 @@ export const FormValid = () => {
 					value={email}
 					onChange={onChange}
 					onBlur={onBlurEmail}
+					required
 				></input>
 				{emailError && <div className={styles.error}>{emailError}</div>}
 
